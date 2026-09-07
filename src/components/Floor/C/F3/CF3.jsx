@@ -2,7 +2,7 @@ import react from "react";
 import styles from "../../Floor.module.css";
 import { TbChevronLeft, TbChevronRight } from "react-icons/tb";
 import gate from "../../../../assets/imgs/gateImg.png";
-import gaf3 from "../../../../assets/imgs/dashboard-svg/floor/ga-F3.png";
+import gaf3 from "../../../../assets/imgs/dashboard-svg/floor/Ga-F3.png";
 import gaFIf1 from "../../../../assets/imgs/dashboard-svg/floor/fi_ga-F1.png";
 import gaFIf2 from "../../../../assets/imgs/dashboard-svg/floor/fi_ga-F2.png";
 import gaFIf3 from "../../../../assets/imgs/dashboard-svg/floor/fi_ga-F3.png";
