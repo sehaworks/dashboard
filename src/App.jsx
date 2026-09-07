@@ -1,20 +1,9 @@
 import { useState } from 'react'
-import heroImg from './assets/hero.png'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
 import './App.css'
+import Dashboard from './pages/Dashboard/Dashboard';
 
 function App() {
-  const [count, setCount] = useState(0)
-
-  return (
-    <>
-      <div>
-        <h1>Dashboard Test</h1>
-        <p>GitHub Pages React 테스트입니다.</p>
-      </div>
-    </>
-  )
+  return <Dashboard />;
 }
 
-export default App
+export default App;

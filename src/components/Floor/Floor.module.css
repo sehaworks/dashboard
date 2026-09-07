@@ -1,0 +1,71 @@
+.floorMap {
+    flex: 1;
+    position: relative;
+ }
+ .floorMap > svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+ }
+ .floorMap > img {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+ }
+
+ .floorInfo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+ }
+ .floorText {
+    margin: 12px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    width: 28px;
+    text-align: center;
+    justify-content: center;
+}
+.dashGap {
+    height: 28px;
+    width: 14px;
+    border-right: 1px dashed var(--white);
+    opacity: 1 !important;
+}
+.floorText span {
+    line-height: 28px;
+    text-align: center;
+    opacity: 0.4;
+    cursor: pointer;
+}
+
+.floorText span:hover {
+    opacity: 1;
+}
+
+.floorText span.active {
+    opacity: 1;
+}
+.floorImg svg {
+    overflow: visible;
+}
+.floorItem {
+    opacity: 0.4;
+    cursor: pointer;
+}
+.floorItem:hover {
+    opacity: 1;
+    filter: drop-shadow(0 0 12px rgba(255, 255, 255, 0.8));
+}
+.floorItem.active {
+    opacity: 1;
+    filter: drop-shadow(0 0 12px rgba(255, 255, 255, 0.8));
+}
+
+.floorItem.active .floorItemOverlay {
+    fill: rgba(255, 255, 255, 0.12);
+}
+
