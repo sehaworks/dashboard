@@ -526,8 +526,7 @@ export default function Dashboard() {
             {b.label}
           </button>
         ))}
-
-      </div>
+      </div >
 
       <div className={styles.dashboardLayout}>
         {/* 사이드바 */}
@@ -1057,6 +1056,6 @@ export default function Dashboard() {
         }}
         buildingZone={activeBuildingZone}
       />
-    </div>
+    </div >
   );
 }

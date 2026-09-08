@@ -32,6 +32,21 @@ body.noScroll::-webkit-scrollbar {
   transform-origin: 0 0;
 }
 
+.dashboardBox button:first-child {
+  left: 43.3464% !important;
+  top: 34.0741% !important;
+}
+
+.dashboardBg button:nth-child(2) {
+  left: 50.5078% !important;
+  top: 36.875% !important;
+}
+
+.dashboardBg button:nth-child(3) {
+  left: 63.9062% !important;
+  top: 37.2454% !important;
+}
+
 .dashboardBg {
   position: absolute;
   inset: 0;
