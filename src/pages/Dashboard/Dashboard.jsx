@@ -111,7 +111,7 @@ export default function Dashboard() {
   const pathRefs = useRef(new Map());
 
   // 계산된 버튼 위치들 [{ id, label, x, y }]
-  const [btns, setBtns] = useState([]);
+  // const [btns, setBtns] = useState([]);
   const [activeZone, setActiveZone] = useState(null);
 
   // path ref 등록 콜백
@@ -158,7 +158,7 @@ export default function Dashboard() {
   }, [recomputeButtons]);
 
   // 호버 정보 박스
-  const activeBtn = btns.find((b) => b.id === activeZone);
+  // const activeBtn = btns.find((b) => b.id === activeZone);
 
   // 메뉴오픈
   const [openMenu, setOpenMenu] = useState(null);
@@ -343,6 +343,17 @@ export default function Dashboard() {
             <path
               d="M724.5 362.5L728.5 431.5L831 470L940 372V304L839 266L724.5 362.5Z"
             />
+            <foreignObject x="800" y="337" width="100" height="40">
+              <button
+                type="button"
+                className={`${styles.zoneBtn} ${activeZone === "A" ? styles.visible : ""}`}
+                onClick={() => handleOpenFloorModal("A")}
+                onMouseEnter={() => setActiveZone("A")}
+                onMouseLeave={() => setActiveZone(null)}
+              >
+                A동
+              </button>
+            </foreignObject>
           </g>
           {/* B동 */}
           <g opacity="0.01" className={`${styles.zone} ${activeZone === "B" ? styles.zoneActive : ""}`} filter="url(#floor5_filter1)"
@@ -354,6 +365,17 @@ export default function Dashboard() {
             <path
               d="M882 373V413.5L870.5 426V443L940 466.5L950 455.5L971.5 464V473L983.5 478.5L989.5 471.5L1008 478.5L1069 416V362.5L939 318L882 373Z"
             />
+            <foreignObject x="925" y="370" width="100" height="40">
+              <button
+                type="button"
+                className={`${styles.zoneBtn} ${activeZone === "B" ? styles.visible : ""}`}
+                onClick={() => handleOpenFloorModal("B")}
+                onMouseEnter={() => setActiveZone("B")}
+                onMouseLeave={() => setActiveZone(null)}
+              >
+                B동
+              </button>
+            </foreignObject>
           </g>
           {/* C동 */}
           <g opacity="0.01" className={`${styles.zone} ${activeZone === "C" ? styles.zoneActive : ""}`} filter="url(#floor5_filter2)"
@@ -366,6 +388,17 @@ export default function Dashboard() {
             <path
               d="M1124.5 462L1232.5 502L1253.5 480.5L1269 487L1282 473L1298.5 478.5L1329.5 447L1324 434.5L1308 429L1311 341L1202.5 302.5L1124.5 376V462Z"
             />
+            <foreignObject x="1200" y="380" width="100" height="40">
+              <button
+                type="button"
+                className={`${styles.zoneBtn} ${activeZone === "C" ? styles.visible : ""}`}
+                onClick={() => handleOpenFloorModal("C")}
+                onMouseEnter={() => setActiveZone("C")}
+                onMouseLeave={() => setActiveZone(null)}
+              >
+                C동
+              </button>
+            </foreignObject>
           </g>
 
           <defs>
@@ -505,28 +538,7 @@ export default function Dashboard() {
           </defs>
         </svg>
 
-        {btns.map((b) => (
-          <button
-            key={b.id}
-            type="button"
-            className={`${styles.zoneBtn} ${activeZone === b.id ? styles.visible : ""}`}
-            style={{
-              position: "absolute",
-              left: `${b.x}%`,
-              top: `${b.y}%`,
-              transform: "translate(-50%, -50%)",
-              zIndex: 100,
-            }}
-            onClick={() => {
-              // C동(또는 b.id가 "C"인 경우)일 때만 모달 열기
-              if (b.id !== "C") return;
-              handleOpenFloorModal(b.id);
-            }}
-            onMouseEnter={() => setActiveZone(b.id)}
-          >
-            {b.label}
-          </button>
-        ))}
+
       </div >
 
       <div className={styles.dashboardLayout}>

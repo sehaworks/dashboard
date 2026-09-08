@@ -20,6 +20,7 @@ body.noScroll::-webkit-scrollbar {
 .dashboardContainer {
   position: relative;
   overflow: hidden;
+  height: 1080px;
 }
 
 .dashboardBox {
