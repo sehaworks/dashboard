@@ -281,6 +281,7 @@ export default function Dashboard() {
     >
       <div className={styles.dashboardBox}>
         <img
+          ref={wrapRef}
           src={dashboardBg}
           alt="MapImg"
           className={styles.dashboardBg}
